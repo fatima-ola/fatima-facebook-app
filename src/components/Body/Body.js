@@ -6,6 +6,17 @@ function Body() {
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
 
+  function submitForm() {
+    var newUsers = JSON.parse(localStorage.getItem('newUsers') || '[]');
+    var newUser = {
+      name: name,
+      username: username,
+      password: password,
+    };
+    newUsers.push(newUser);
+    localStorage.setItem('newUsers', JSON.stringify(newUsers));
+  }
+
   return (
     <div>
       <div className='row justify-content-center'>
@@ -17,7 +28,7 @@ function Body() {
         </div>
         <div className='col-md-4'>
           <h1>Register</h1>
-          <form>
+          <form onSubmit={submitForm}>
             <input
               type='text'
               placeholder='Name'
