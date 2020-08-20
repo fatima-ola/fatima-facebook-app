@@ -1,11 +1,20 @@
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+import './NavBar.css';
 
 function NavBar() {
   return (
     <div>
-      <h1>NavBar leleyi</h1>
-      <button className='btn btn-primary'>This is Bootstrap button</button>
+      <div className='row nav'>
+        <div className='col-md-6'>
+          <h1>FaceBook</h1>
+        </div>
+        <div className='col-md-6'>
+          <input type='text' placeholder='Username' />
+          <input type='text' placeholder='Password' />
+          <button>LOGIN</button>
+        </div>
+      </div>
     </div>
   );
 }

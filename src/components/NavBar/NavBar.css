@@ -1,0 +1,9 @@
+.nav {
+  background-color: blue;
+  color: #ffffff;
+}
+
+input,
+button {
+  margin: 10px;
+}
