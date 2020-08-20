@@ -1,12 +1,14 @@
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
+import swal from 'sweetalert';
 
 function Body() {
   const [name, setname] = useState('');
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
 
-  function submitForm() {
+  function submitForm(event) {
+    event.preventDefault();
     var newUsers = JSON.parse(localStorage.getItem('newUsers') || '[]');
     var newUser = {
       name: name,
@@ -15,6 +17,8 @@ function Body() {
     };
     newUsers.push(newUser);
     localStorage.setItem('newUsers', JSON.stringify(newUsers));
+
+    swal('Thank you!', 'Registration is Successful!', 'success');
   }
 
   return (
