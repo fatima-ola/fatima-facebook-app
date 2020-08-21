@@ -9,14 +9,14 @@ function Body() {
 
   function submitForm(event) {
     event.preventDefault();
-    var newUsers = JSON.parse(localStorage.getItem('newUsers') || '[]');
+    var users = JSON.parse(localStorage.getItem('users') || '[]');
     var newUser = {
       name: name,
       username: username,
       password: password,
     };
-    newUsers.push(newUser);
-    localStorage.setItem('newUsers', JSON.stringify(newUsers));
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
 
     swal('Thank you!', 'Registration is Successful!', 'success');
   }
@@ -28,6 +28,7 @@ function Body() {
           <img
             src='https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/7XdR1KwCifL.png'
             alt='connecting the world'
+            width='100%'
           />
         </div>
         <div className='col-md-4'>
