@@ -2,10 +2,18 @@ import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import './NavBar.css';
 import swal from 'sweetalert';
+import { useHistory } from 'react-router-dom';
 
 function NavBar() {
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
+  const history = useHistory();
+
+  function logout() {
+    localStorage.removeItem('loggedin');
+    history.push('/');
+    window.location.reload(true);
+  }
 
   function submitButton(event) {
     event.preventDefault();
@@ -20,6 +28,9 @@ function NavBar() {
 
     if (i == 1) {
       swal('Welcome!', 'Login Successful!', 'success');
+      history.push('/dashboard');
+      localStorage.setItem('loggedin', 'loggedin');
+      window.location.reload(true);
     } else {
       swal('Welcome!', 'Invalid Login!', 'error');
     }
@@ -32,22 +43,32 @@ function NavBar() {
           <h1>FaceBook</h1>
         </div>
         <div className='col-md-6'>
-          <input
-            type='text'
-            placeholder='Username'
-            value={username}
-            onChange={(e) => {
-              setusername(e.target.value);
-            }}
-          />
-          <input
-            type='text'
-            placeholder='Password'
-            value={password}
-            onChange={(e) => {
-              setpassword(e.target.value);
-            }}
-          />
+          {(() => {
+            if (localStorage.getItem('loggedin')) {
+              return <button onClick={logout}>LOGOUT</button>;
+            } else {
+              return (
+                <div>
+                  <input
+                    type='text'
+                    placeholder='Username'
+                    value={username}
+                    onChange={(e) => {
+                      setusername(e.target.value);
+                    }}
+                  />
+                  <input
+                    type='text'
+                    placeholder='Password'
+                    value={password}
+                    onChange={(e) => {
+                      setpassword(e.target.value);
+                    }}
+                  />
+                </div>
+              );
+            }
+          })()}
           <button onClick={submitButton}>LOGIN</button>
         </div>
       </div>
