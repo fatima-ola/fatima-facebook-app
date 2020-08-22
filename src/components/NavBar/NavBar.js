@@ -21,12 +21,12 @@ function NavBar() {
 
     var i = 0;
     for (var user of users) {
-      if (user.username === username && user.password === password) {
+      if (user.username == username && user.password == password) {
         i++;
       }
     }
 
-    if (i === 1) {
+    if (i == 1) {
       swal('Welcome!', 'Login Successful!', 'success');
       history.push('/dashboard');
       localStorage.setItem('loggedin', 'loggedin');
