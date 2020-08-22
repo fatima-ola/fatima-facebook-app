@@ -26,7 +26,7 @@ function NavBar() {
       }
     }
 
-    if (i == 1) {
+    if (i === 1) {
       swal('Welcome!', 'Login Successful!', 'success');
       history.push('/dashboard');
       localStorage.setItem('loggedin', 'loggedin');
