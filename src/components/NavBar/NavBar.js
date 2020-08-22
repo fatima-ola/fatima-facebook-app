@@ -21,7 +21,7 @@ function NavBar() {
 
     var i = 0;
     for (var user of users) {
-      if (user.username == username && user.password == password) {
+      if (user.username === username && user.password === password) {
         i++;
       }
     }
@@ -32,7 +32,7 @@ function NavBar() {
       localStorage.setItem('loggedin', 'loggedin');
       window.location.reload(true);
     } else {
-      swal('Welcome!', 'Invalid Login!', 'error');
+      swal('Sorry!', 'Invalid Login!', 'error');
     }
   }
 
@@ -65,11 +65,11 @@ function NavBar() {
                       setpassword(e.target.value);
                     }}
                   />
+                  <button onClick={submitButton}>LOGIN</button>
                 </div>
               );
             }
           })()}
-          <button onClick={submitButton}>LOGIN</button>
         </div>
       </div>
     </div>
