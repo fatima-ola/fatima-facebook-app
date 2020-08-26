@@ -9,11 +9,11 @@ function NavBar() {
   const [password, setpassword] = useState('');
   const history = useHistory();
 
-  function logout() {
+  const logout = () => {
     localStorage.removeItem('loggedin');
     history.push('/');
     window.location.reload(true);
-  }
+  };
 
   function submitButton(event) {
     event.preventDefault();
@@ -28,8 +28,8 @@ function NavBar() {
 
     if (i == 1) {
       swal('Welcome!', 'Login Successful!', 'success');
-      history.push('/dashboard');
       localStorage.setItem('loggedin', 'loggedin');
+      history.push('/dashboard');
       window.location.reload(true);
     } else {
       swal('Sorry!', 'Invalid Login!', 'error');
