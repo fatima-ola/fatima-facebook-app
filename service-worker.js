@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fatima-facebook-app/precache-manifest.3fb854ffd1781eac5b23546b9e735bf5.js"
+  "/fatima-facebook-app/precache-manifest.971501fe2163660b623178e738e00ded.js"
 );
 
 self.addEventListener('message', (event) => {

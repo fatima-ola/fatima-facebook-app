@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fatima-facebook-app/static/css/main.94176c8c.chunk.css",
-    "main.js": "/fatima-facebook-app/static/js/main.ce23d59f.chunk.js",
-    "main.js.map": "/fatima-facebook-app/static/js/main.ce23d59f.chunk.js.map",
+    "main.js": "/fatima-facebook-app/static/js/main.2e66819e.chunk.js",
+    "main.js.map": "/fatima-facebook-app/static/js/main.2e66819e.chunk.js.map",
     "runtime-main.js": "/fatima-facebook-app/static/js/runtime-main.20c3f771.js",
     "runtime-main.js.map": "/fatima-facebook-app/static/js/runtime-main.20c3f771.js.map",
     "static/css/2.11829350.chunk.css": "/fatima-facebook-app/static/css/2.11829350.chunk.css",
     "static/js/2.822cfd84.chunk.js": "/fatima-facebook-app/static/js/2.822cfd84.chunk.js",
     "static/js/2.822cfd84.chunk.js.map": "/fatima-facebook-app/static/js/2.822cfd84.chunk.js.map",
     "index.html": "/fatima-facebook-app/index.html",
-    "precache-manifest.3fb854ffd1781eac5b23546b9e735bf5.js": "/fatima-facebook-app/precache-manifest.3fb854ffd1781eac5b23546b9e735bf5.js",
+    "precache-manifest.971501fe2163660b623178e738e00ded.js": "/fatima-facebook-app/precache-manifest.971501fe2163660b623178e738e00ded.js",
     "service-worker.js": "/fatima-facebook-app/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/fatima-facebook-app/static/css/2.11829350.chunk.css.map",
     "static/css/main.94176c8c.chunk.css.map": "/fatima-facebook-app/static/css/main.94176c8c.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.11829350.chunk.css",
     "static/js/2.822cfd84.chunk.js",
     "static/css/main.94176c8c.chunk.css",
-    "static/js/main.ce23d59f.chunk.js"
+    "static/js/main.2e66819e.chunk.js"
   ]
 }
